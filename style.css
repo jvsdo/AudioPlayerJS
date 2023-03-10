@@ -1,0 +1,182 @@
+/* Importando a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Aplicando a fonte ao body do HTML */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0; padding:0;
+}
+
+.player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .album-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-image: url(https://i.scdn.co/image/ab67616d0000b2731440ffaa43c53d65719e0150);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+  }
+  
+  .song-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .song-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .artist {
+    font-size: 16px;
+    color: #999;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .progress-bar-container {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #2196f3;
+    border-radius: 5px;
+  }
+  
+  .progress-bar-handle {
+    position: absolute;
+    top: -7.5px;
+    left: 0%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #2196f3;
+    cursor: pointer;
+    transform: translateX(-50%);
+  }
+  
+  .play-pause-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2196f3;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .play-pause-button i {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .play-pause-button.paused i.fa-play {
+    display: block; /* mostrar o ícone de play */
+  }
+  
+  .play-pause-button.paused i.fa-pause {
+    display: none; /* esconder o ícone de pause */
+  }
+  
+  .play-pause-button.playing i.fa-play {
+    display: none; /* esconder o ícone de play */
+  }
+  
+  .play-pause-button.playing i.fa-pause {
+    display: block; /* mostrar o ícone de pause */
+  }
+  
+  
+  .volume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .volume i {
+    color: #999;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .volume-slider {
+    width: 100%;
+    margin-left: 10px;
+    background-color: transparent;
+  }
+  
+  .volume-slider:focus {
+    outline: none;
+  }
+  
+  .volume-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #2196f3;
+    margin-top: -7px;
+    cursor: pointer;
+  }
+  
+  .volume-slider::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #2196f3;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .player {
+      max-width: 400px;
+    }
+  }
+  
